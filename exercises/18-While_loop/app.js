@@ -1,12 +1,28 @@
-//fix this function:
-function startCounting() {
-	let counter = 100;
-	while (counter <= 100) {
-		counter--;
-		console.log(counter);
-	}
+function getColor(colorNumber = 0) {
 
-	return counter;
+	colorNumber = parseInt(colorNumber);
+	
+	switch (colorNumber) {
+		case 1: return "red";
+
+		case 2: return "yellow";
+
+		case 3: return "blue";
+
+		case 4: return "green";
+
+		default: return "black";
+
+	}
 }
 
-startCounting();
+function getAllStudentColors() {
+
+	for (let i = 0; i < 10; i++) {
+		let color = getColor(Math.floor(Math.random() * 4) + 1)
+		console.log(color);
+	}
+}
+
+getAllStudentColors();
+
